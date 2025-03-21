@@ -45,9 +45,9 @@ public class Main {
         Mahasiswa mahasiswa = new Mahasiswa();
 
         System.out.println("Pilih Login : ");
-        System.out.println("1. Admin : ");
-        System.out.println("2. Mahasiswa : ");
-        System.out.println("Masukkan Pilihan : ");
+        System.out.println("1. Admin");
+        System.out.println("2. Mahasiswa");
+        System.out.print("Masukkan Pilihan : ");
         int pilihan = sc.nextInt();
 
         switch (pilihan) {
