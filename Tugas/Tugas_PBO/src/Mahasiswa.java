@@ -1,17 +1,20 @@
 import java.util.Scanner;
 
-class Mahasiswa{
+class Mahasiswa extends User{
     Scanner sc = new Scanner(System.in);
-    String nama;
-    String nim;
 
+    public Mahasiswa(String nama, String nim) {
+        super(nama, nim);
+    }
+
+    @Override
     void login(){
         System.out.print("Masukkan nama: ");
-        nama = sc.nextLine();
+        String nama = sc.nextLine();
         System.out.print("Masukkan nim: ");
-        nim = sc.nextLine();
+        String nim = sc.nextLine();
 
-        if(nama.equals("farel wahyu firdaus") && nim.equals("202410370110130")){
+        if(nama.equalsIgnoreCase("farel wahyu firdaus") && nim.equals("202410370110130")){
             System.out.println("Login Success \n");
             displayInfo();
         }else {
@@ -20,8 +23,8 @@ class Mahasiswa{
     }
 
     void displayInfo(){
-        System.out.println("Nama : " + nama);
+        System.out.println("Nama : " + getNama());
         System.out.println("Kelas : D");
-        System.out.println("NIM : "+ nim);
+        System.out.println("NIM : "+ getNim());
     }
 }

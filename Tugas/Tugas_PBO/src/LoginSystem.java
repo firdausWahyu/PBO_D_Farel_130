@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class LoginSystem {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Admin admin = new Admin();
-        Mahasiswa mahasiswa = new Mahasiswa();
+        Admin admin = new Admin("admin130", "password130", "Farel", "202410370110130");
+        Mahasiswa mahasiswa = new Mahasiswa("farel wahyu firdaus", "202410370110130");
 
         System.out.println("Pilih Login : ");
         System.out.println("1. Admin");
