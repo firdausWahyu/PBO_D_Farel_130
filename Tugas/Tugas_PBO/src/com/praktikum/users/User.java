@@ -1,9 +1,10 @@
+package com.praktikum.users;
+
 import java.util.Scanner;
 
-public class User {
+public abstract class User {
     private String nama;
     private String nim;
-    private Scanner sc;
 
     public User(String nama, String nim){
         this.nama = nama;
@@ -18,7 +19,7 @@ public class User {
         return nama;
     }
 
-    public void setNim(String nama){
+    public void setNim(String nim){
         this.nim = nim;
     }
 
@@ -26,11 +27,11 @@ public class User {
         return nim;
     }
 
-    void login(){
 
-    }
 
-    void displayInfo(){
+    public abstract void login();
 
-    }
+    public abstract void displayInfo();
+
+    abstract void displayAppMenu();
 }
